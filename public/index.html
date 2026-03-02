@@ -5,10 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Flower Ranch | Bloom & Brew</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+<!-- Navigation (same as before) -->
 <nav class="navbar navbar-expand-lg fixed-top py-3">
     <div class="container">
         <a class="navbar-brand serif" href="index.html">Flower Ranch.</a>
@@ -39,6 +41,7 @@
     </div>
 </nav>
 
+<!-- Hero Section (existing) -->
 <header class="hero-bg" style="background-image: url('https://flowerranchcafe.com/cdn/shop/collections/DSCF1035.jpg?v=1692591348&width=750');">
     <div class="hero-overlay" style="background: rgba(0,0,0,0.4);"></div>
     <div class="container position-relative text-white py-5">
@@ -53,7 +56,92 @@
     </div>
 </header>
 
-<section class="container py-5 my-5">
+<!-- Featured Products Section (NEW) -->
+<section class="container py-5">
+    <h2 class="serif display-5 text-center mb-5">Our Best Sellers</h2>
+    <div class="row g-4">
+        <!-- Product 1: Coffee -->
+        <div class="col-md-4">
+            <div class="menu-card h-100">
+                <div class="img-container"><img src="https://flowerranchcafe.com/cdn/shop/files/DSCF1160.jpg?v=1753351517&width=823"></div>
+                <div class="card-divider"></div>
+                <div class="p-4">
+                    <h3 class="serif h5">Cafe Mocha</h3>
+                    <p class="small text-muted">Double shot espresso, milk, and housemade chocolate syrup.</p>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <span class="price">₱180.00</span>
+                        <button onclick="addToCart('Cafe Mocha', 180)" class="btn btn-sm btn-outline-dark rounded-pill px-3">Add to Bag</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Product 2: Bakery -->
+        <div class="col-md-4">
+            <div class="menu-card h-100">
+                <div class="img-container"><img src="https://flowerranchcafe.com/cdn/shop/files/DSCF1152.jpg?v=1692605381&width=823"></div>
+                <div class="card-divider"></div>
+                <div class="p-4">
+                    <h3 class="serif h5">Butter Croissant</h3>
+                    <p class="small text-muted">Classic puff pastry, rich in savory buttery goodness.</p>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <span class="price">₱100.00</span>
+                        <button onclick="addToCart('Butter Croissant', 100)" class="btn btn-sm btn-outline-dark rounded-pill px-3">Add to Bag</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Product 3: Flowers -->
+        <div class="col-md-4">
+            <div class="menu-card h-100">
+                <div class="img-container"><img src="https://flowerranchcafe.com/cdn/shop/files/DSCF1254.jpg?v=1701947003&width=823"></div>
+                <div class="card-divider"></div>
+                <div class="p-4">
+                    <h3 class="serif h5">Lily Bouquet</h3>
+                    <p class="small text-muted">Fresh fragrant stems, wrapped in kraft paper.</p>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <span class="price">₱500.00</span>
+                        <button onclick="addToCart('Lily', 500)" class="btn btn-sm btn-outline-dark rounded-pill px-3">Add to Bag</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Why Choose Us Section (NEW) -->
+<section class="container py-5 bg-paper rounded-5">
+    <h2 class="serif display-5 text-center mb-5">Why Choose Flower Ranch?</h2>
+    <div class="row g-4 text-center">
+        <div class="col-md-4">
+            <i class="fas fa-seedling fa-3x text-sage mb-3"></i>
+            <h4 class="serif">Fresh Daily</h4>
+            <p>Our flowers are delivered fresh every morning, and our pastries are baked in-house daily.</p>
+        </div>
+        <div class="col-md-4">
+            <i class="fas fa-mug-hot fa-3x text-rose mb-3"></i>
+            <h4 class="serif">Artisanal Coffee</h4>
+            <p>We source single-origin beans and roast them to perfection for every cup.</p>
+        </div>
+        <div class="col-md-4">
+            <i class="fas fa-heart fa-3x text-gold mb-3"></i>
+            <h4 class="serif">Community Vibe</h4>
+            <p>A cozy space where you can relax, work, or catch up with friends.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Call-to-Action Banner (NEW) -->
+<section class="container-fluid py-5" style="background: linear-gradient(90deg, var(--sage) 0%, var(--rose) 100%);">
+    <div class="container text-center text-white">
+        <h2 class="serif display-6 mb-3">Ready to visit us or place an order?</h2>
+        <p class="lead mb-4">We're open daily from 8am to 8pm. Come for the flowers, stay for the coffee.</p>
+        <a href="location.html" class="btn btn-light rounded-pill px-5 py-3 me-2">Find Us</a>
+        <a href="checkout.html" class="btn btn-outline-light rounded-pill px-5 py-3">Order Now</a>
+    </div>
+</section>
+
+<!-- Original Intro Section (existing, but adjust spacing) -->
+<section class="container py-5">
     <div class="row g-5 align-items-center">
         <div class="col-md-6">
             <img src="https://flowerranchcafe.com/cdn/shop/collections/DSCF0087_6eadd5a5-c261-4c20-98e7-3f00d8c00538.jpg?v=1701368974&width=750" class="img-fluid rounded-5 shadow">
@@ -66,6 +154,53 @@
     </div>
 </section>
 
+<!-- Testimonials Section (NEW) -->
+<section class="container py-5">
+    <h2 class="serif display-5 text-center mb-5">What Our Customers Say</h2>
+    <div class="row g-4">
+        <div class="col-md-4">
+            <div class="testimonial-card">
+                <i class="fas fa-quote-left fa-2x text-sage mb-3"></i>
+                <p class="fst-italic">"The best cafe in town! Their lavender espresso tonic is my go-to."</p>
+                <div class="d-flex align-items-center">
+                    <i class="fas fa-user-circle fa-2x me-3 text-muted"></i>
+                    <div>
+                        <h6 class="mb-0">Maria Santos</h6>
+                        <small class="text-muted">Regular customer</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="testimonial-card">
+                <i class="fas fa-quote-left fa-2x text-sage mb-3"></i>
+                <p class="fst-italic">"I ordered a bouquet for my mom's birthday and she loved it! Fresh and beautifully arranged."</p>
+                <div class="d-flex align-items-center">
+                    <i class="fas fa-user-circle fa-2x me-3 text-muted"></i>
+                    <div>
+                        <h6 class="mb-0">Jose Reyes</h6>
+                        <small class="text-muted">Happy customer</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="testimonial-card">
+                <i class="fas fa-quote-left fa-2x text-sage mb-3"></i>
+                <p class="fst-italic">"The atmosphere is so relaxing, and the staff are always friendly. Highly recommended!"</p>
+                <div class="d-flex align-items-center">
+                    <i class="fas fa-user-circle fa-2x me-3 text-muted"></i>
+                    <div>
+                        <h6 class="mb-0">Anna Lopez</h6>
+                        <small class="text-muted">Coffee lover</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Updated Footer -->
 <footer>
     <div class="container">
         <div class="row">
@@ -74,25 +209,26 @@
                 <a href="index.html" class="sitemap-link">Home</a>
                 <a href="story.html" class="sitemap-link">Our Story</a>
                 <a href="coffee.html" class="sitemap-link">Coffee Menu</a>
-            </div>
-            <div class="col-md-4">
-                <h5 class="serif mb-4">&nbsp;</h5>
                 <a href="bakery.html" class="sitemap-link">Bakery</a>
                 <a href="flowers.html" class="sitemap-link">Floral Studio</a>
-                <a href="gallery.html" class="sitemap-link">Gallery</a>
-                <a href="location.html" class="sitemap-link">Find Us</a>
+            </div>
+            <div class="col-md-4">
+                <h5 class="serif mb-4">Connect With Us</h5>
+                <a href="#" class="sitemap-link"><i class="fab fa-facebook-f me-2"></i>Facebook</a>
+                <a href="#" class="sitemap-link"><i class="fab fa-instagram me-2"></i>Instagram</a>
+                <a href="#" class="sitemap-link"><i class="fab fa-twitter me-2"></i>Twitter</a>
+                <a href="#" class="sitemap-link"><i class="fab fa-pinterest me-2"></i>Pinterest</a>
             </div>
             <div class="col-md-4 text-md-end">
                 <h5 class="serif mb-4">Project VACLA</h5>
                 <div class="dev-credit">San Diego | Barcelona | Dy | Mendoza | Tan</div>
+                <p class="small mt-3">&copy; 2026 Flower Ranch. All rights reserved.</p>
             </div>
         </div>
     </div>
 </footer>
 
-<!-- Popper.js and Bootstrap JS -->
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 <script src="cart.js"></script>
 </body>
 </html>
