@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee Menu | Flower Ranch</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg fixed-top py-3">
+    <div class="container">
+        <a class="navbar-brand serif" href="index.html">Flower Ranch.</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto gap-3 align-items-center">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="story.html">Story</a></li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="menuDrop" role="button" data-bs-toggle="dropdown">Menus</a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="coffee.html">Coffee</a></li>
+                        <li><a class="dropdown-item" href="bakery.html">Bakery</a></li>
+                        <li><a class="dropdown-item" href="flowers.html">Flowers</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+                <li class="nav-item"><a class="nav-link" href="location.html">Visit</a></li>
+                <li class="nav-item">
+                    <a class="btn btn-dark rounded-pill px-4 text-white" href="checkout.html">
+                        Bag (<span id="cart-count">0</span>)
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+
+<header class="hero-bg" style="background-image: url('https://flowerranchcafe.com/cdn/shop/files/DSCF8766_copy.jpg?v=1680945551&width=2000');">
+    <div class="hero-overlay"></div>
+    <div class="container position-relative text-white py-5 text-center">
+        <h1 class="display-3 serif">The Brew Bar</h1>
+        <p class="lead">Artisanal coffee brewed with intention.</p>
+    </div>
+</header>
+
+<div class="container py-5">
+    <div class="row g-4">
+        <div class="col-md-4">
+            <div class="menu-card">
+                <div class="img-container"><img src="https://flowerranchcafe.com/cdn/shop/files/DSCF1160.jpg?v=1753351517&width=823"></div>
+                <div class="card-divider"></div>
+                <div class="p-4">
+                    <h3 class="serif h5">Cafe Mocha</h3>
+                    <p class="small text-muted">Double shot espresso, milk, and our housemade single origin chocolate syrup.</p>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <span class="price">₱180.00</span>
+                        <button onclick="addToCart('Cafe Mocha', 180)" class="btn btn-sm btn-outline-dark rounded-pill px-3">Add to Bag</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="menu-card">
+                <div class="img-container"><img src="https://flowerranchcafe.com/cdn/shop/files/DSCF1134.jpg?v=1753350684&width=823"></div>
+                <div class="card-divider"></div>
+                <div class="p-4">
+                    <h3 class="serif h5">Peach Cascara Soda</h3>
+                    <p class="small text-muted">A refreshing mix of soda infused with peach and tea steeped from dried coffee cherries.</p>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <span class="price">₱220.00</span>
+                        <button onclick="addToCart('Peach Cascara Soda', 220)" class="btn btn-sm btn-outline-dark rounded-pill px-3">Add to Bag</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="menu-card">
+                <div class="img-container"><img src="https://flowerranchcafe.com/cdn/shop/files/DSCF1073.jpg?v=1692597956&width=823"></div>
+                <div class="card-divider"></div>
+                <div class="p-4">
+                    <h3 class="serif h5">Lavender Espresso Tonic</h3>
+                    <p class="small text-muted">Double shot espresso, tonic water, and a hint of sweet lavender syrup.</p>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <span class="price">₱180.00</span>
+                        <button onclick="addToCart('Lavender Espresso Tonic', 180)" class="btn btn-sm btn-outline-dark rounded-pill px-3">Add to Bag</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="menu-card">
+                <div class="img-container"><img src="https://flowerranchcafe.com/cdn/shop/files/DSCF1115.jpg?v=1692605137&width=823"></div>
+                <div class="card-divider"></div>
+                <div class="p-4">
+                    <h3 class="serif h5">Cafe Latte</h3>
+                    <p class="small text-muted">A balanced espresso drink with milk. Served hot or iced.</p>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <span class="price">₱160.00</span>
+                        <button onclick="addToCart('Cafe Latte', 160)" class="btn btn-sm btn-outline-dark rounded-pill px-3">Add to Bag</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="menu-card">
+                <div class="img-container"><img src="https://flowerranchcafe.com/cdn/shop/files/DSCF4042.jpg?v=1707381740&width=823"></div>
+                <div class="card-divider"></div>
+                <div class="p-4">
+                    <h3 class="serif h5">Long Black</h3>
+                    <p class="small text-muted">Double shot of espresso over water. Served hot or iced.</p>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <span class="price">₱140.00</span>
+                        <button onclick="addToCart('Long Black', 140)" class="btn btn-sm btn-outline-dark rounded-pill px-3">Add to Bag</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="menu-card">
+                <div class="img-container"><img src="https://flowerranchcafe.com/cdn/shop/files/DSCF2558.jpg?v=1701946157&width=823"></div>
+                <div class="card-divider"></div>
+                <div class="p-4">
+                    <h3 class="serif h5">Orange Masala Chai</h3>
+                    <p class="small text-muted">Refreshing and citrusy iced tea infused with aromatic chai spices.</p>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <span class="price">₱180.00</span>
+                        <button onclick="addToCart('Orange Masala Chai', 180)" class="btn btn-sm btn-outline-dark rounded-pill px-3">Add to Bag</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="menu-card">
+                <div class="img-container"><img src="https://flowerranchcafe.com/cdn/shop/files/DSCF1094.jpg?v=1701944819&width=823"></div>
+                <div class="card-divider"></div>
+                <div class="p-4">
+                    <h3 class="serif h5">Lemon Espresso Tonic</h3>
+                    <p class="small text-muted">Double shot espresso, tonic water, and zesty housemade lemon syrup.</p>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <span class="price">₱180.00</span>
+                        <button onclick="addToCart('Lemon Espresso Tonic', 180)" class="btn btn-sm btn-outline-dark rounded-pill px-3">Add to Bag</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="menu-card">
+                <div class="img-container"><img src="https://flowerranchcafe.com/cdn/shop/files/DSCF1146.jpg?v=1692600946&width=823"></div>
+                <div class="card-divider"></div>
+                <div class="p-4">
+                    <h3 class="serif h5">Rose Tea Cold Brew</h3>
+                    <p class="small text-muted">Light relaxing taste with a fragrant smell. Homemade rose syrup.</p>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <span class="price">₱150.00</span>
+                        <button onclick="addToCart('Rose Tea Cold Brew', 150)" class="btn btn-sm btn-outline-dark rounded-pill px-3">Add to Bag</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="menu-card">
+                <div class="img-container"><img src="https://flowerranchcafe.com/cdn/shop/files/3EF545D6-153D-4577-8D06-158E3882D421-78855-00000C1B09C8915D_31b2a5b8-88c8-4b4e-b2ae-0114d15ee10b.jpg?v=1701368578&width=823"></div>
+                <div class="card-divider"></div>
+                <div class="p-4">
+                    <h3 class="serif h5">Matcha Latte</h3>
+                    <p class="small text-muted">Premium first flush tea from Uji, Kyoto. Whisked to order.</p>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <span class="price">₱220.00</span>
+                        <button onclick="addToCart('Matcha Latte', 220)" class="btn btn-sm btn-outline-dark rounded-pill px-3">Add to Bag</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="menu-card">
+                <div class="img-container"><img src="https://flowerranchcafe.com/cdn/shop/files/DSCF1149.jpg?v=1692597432&width=823"></div>
+                <div class="card-divider"></div>
+                <div class="p-4">
+                    <h3 class="serif h5">Cortado</h3>
+                    <p class="small text-muted">Equal amount of espresso and silky steamed milk.</p>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <span class="price">₱150.00</span>
+                        <button onclick="addToCart('Cortado', 150)" class="btn btn-sm btn-outline-dark rounded-pill px-3">Add to Bag</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="menu-card">
+                <div class="img-container"><img src="https://flowerranchcafe.com/cdn/shop/files/DSCF2550.jpg?v=1701946447&width=823"></div>
+                <div class="card-divider"></div>
+                <div class="p-4">
+                    <h3 class="serif h5">Signature Hot Choco</h3>
+                    <p class="small text-muted">Housemade single origin chocolate syrup with steamed milk.</p>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <span class="price">₱180.00</span>
+                        <button onclick="addToCart('Signature Hot Choco', 180)" class="btn btn-sm btn-outline-dark rounded-pill px-3">Add to Bag</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="menu-card">
+                <div class="img-container"><img src="https://flowerranchcafe.com/cdn/shop/files/DSCF1132.jpg?v=1692600175&width=823"></div>
+                <div class="card-divider"></div>
+                <div class="p-4">
+                    <h3 class="serif h5">Cappuccino</h3>
+                    <p class="small text-muted">Freshly pulled ristretto shot with foamy steamed milk.</p>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <span class="price">₱160.00</span>
+                        <button onclick="addToCart('Cappuccino', 160)" class="btn btn-sm btn-outline-dark rounded-pill px-3">Add to Bag</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <h5 class="serif mb-4">Flower Ranch.</h5>
+                <a href="index.html" class="sitemap-link">Home</a>
+                <a href="story.html" class="sitemap-link">Our Story</a>
+                <a href="coffee.html" class="sitemap-link">Coffee Menu</a>
+            </div>
+            <div class="col-md-4">
+                <h5 class="serif mb-4">&nbsp;</h5>
+                <a href="bakery.html" class="sitemap-link">Bakery</a>
+                <a href="flowers.html" class="sitemap-link">Floral Studio</a>
+                <a href="gallery.html" class="sitemap-link">Gallery</a>
+                <a href="location.html" class="sitemap-link">Find Us</a>
+            </div>
+            <div class="col-md-4 text-md-end">
+                <h5 class="serif mb-4">Project VACLA</h5>
+                <div class="dev-credit">San Diego | Barcelona | Dy | Mendoza | Tan</div>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- Popper.js and Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+<script src="cart.js"></script>
+</body>
+</html>

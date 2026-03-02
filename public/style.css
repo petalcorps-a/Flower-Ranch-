@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,600;1,300&family=Outfit:wght@300;500;700&display=swap');
+
+:root {
+    --paper: #F9F7F2;
+    --charcoal: #262626;
+    --sage: #849669;
+    --rose: #C08497;
+    --gold: #D69F4C;
+    --clay: #E6DCD3;
+}
+
+body { 
+    background-color: var(--paper); 
+    color: var(--charcoal); 
+    font-family: 'Outfit', sans-serif; 
+    overflow-x: hidden; 
+    padding-top: 90px; 
+    
+}
+
+body.checkout-page {
+    background: 
+        linear-gradient(rgba(92,64,51,0.85), rgba(38,38,38)),
+        url('bg.jpg') center/cover no-repeat fixed;
+    background-blend-mode: overlay;
+    min-height: 100vh;
+    color: var(--charcoal);
+}
+
+h1, h2, h3, .serif { font-family: 'Fraunces', serif; }
+
+.navbar { 
+    background: rgba(249, 247, 242, 0.98) !important; 
+    backdrop-filter: blur(10px); 
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+.nav-link { 
+    font-weight: 500; 
+    color: var(--charcoal); 
+    transition: 0.3s; 
+}
+
+.nav-link:hover { color: var(--rose); }
+
+.btn-ranch {
+    background-color: var(--charcoal);
+    color: white;
+    padding: 12px 30px;
+    border-radius: 50px;
+    border: none;
+    transition: 0.3s;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn-ranch:hover {
+    background-color: var(--rose);
+    color: white;
+    transform: translateY(-2px);
+}
+
+.hero-section {
+    height: 70vh;
+    background: url('https://flowerranchcafe.com/cdn/shop/files/DSCF8765.jpg?v=1688654561&width=1500') center/cover;
+    display: flex;
+    align-items: center;
+    border-radius: 0 0 50px 50px;
+    margin-bottom: 80px;
+}
+
+.ranch-box {
+    background-color: var(--clay);
+    padding: 40px;
+    border-radius: 30px;
+    height: 100%;
+}
+
+.menu-card {
+    background: white;
+    border: 2px solid #8B5A2B;
+    border-radius: 25px;
+    transition: 0.3s;
+    height: 100%;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+.menu-card:hover {
+    transform: translateY(-10px);
+    border-color: #A0522D;
+    box-shadow: 0 12px 20px rgba(0,0,0,0.1);
+}
+
+.menu-card .img-container {
+    padding: 20px 20px 0 20px;
+    overflow: hidden;
+}
+
+.menu-card .img-container img { 
+    height: 250px; 
+    object-fit: contain; 
+    width: 100%;
+    border-radius: 25px;
+    transition: transform 0.3s ease;
+}
+
+.menu-card:hover img {
+    transform: scale(1.02);
+}
+
+.card-divider {
+    border-top: 1px solid var(--clay);
+    margin: 0 25px;
+}
+
+.gallery-item {
+    height: 400px;
+    object-fit: contain;
+    background-color: var(--clay);
+    width: 100%;
+    border-radius: 25px;
+    padding: 15px;
+    transition: 0.3s;
+    cursor: zoom-in;
+}
+
+.gallery-item:hover { transform: scale(1.02); }
+
+#lightbox { 
+    position: fixed; top: 0; left: 0; width: 100%; height: 100%; 
+    background: rgba(0,0,0,0.95); 
+    z-index: 9999; 
+    display: none; 
+    align-items: center; 
+    justify-content: center; 
+}
+
+#lightbox img { 
+    max-width: 80%; 
+    max-height: 80%; 
+    border-radius: 10px; 
+}
+
+footer {
+    background-color: var(--charcoal);
+    padding: 80px 0 40px 0;
+    margin-top: 100px;
+    color: var(--paper);
+}
+
+footer h5, footer .serif {
+    color: #FFFFFF !important;
+    letter-spacing: 1px;
+}
+
+.sitemap-link {
+    color: var(--paper) !important;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 12px;
+    font-weight: 300;
+    transition: 0.3s;
+    opacity: 0.85;
+}
+
+.sitemap-link:hover {
+    color: var(--rose) !important;
+    opacity: 1;
+    padding-left: 5px;
+}
+
+.dev-credit {
+    color: var(--clay);
+    font-size: 0.85rem;
+    margin-bottom: 5px;
+    opacity: 0.7;
+}
+
+.text-rose { color: var(--rose); }
+.text-sage { color: var(--sage); }
+.bg-paper { background-color: var(--paper); }
+
+/* Table styles for hours */
+.hours-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 25px;
+    overflow: hidden;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.05);
+}
+
+.hours-table th {
+    background-color: var(--charcoal);
+    color: white;
+    font-family: 'Fraunces', serif;
+    padding: 15px;
+    font-weight: 600;
+}
+
+.hours-table td {
+    padding: 12px 15px;
+    border-bottom: 1px solid var(--clay);
+}
+
+.hours-table tr:last-child td {
+    border-bottom: none;
+}
+
+.hours-table td:first-child {
+    font-weight: 600;
+    background-color: rgba(132, 150, 105, 0.1);
+}
+
+.disclaimer {
+    font-style: italic;
+    color: var(--rose);
+    margin-top: 15px;
+    font-size: 0.9rem;
+}
+

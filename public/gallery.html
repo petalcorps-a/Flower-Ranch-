@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery | Flower Ranch</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg fixed-top py-3">
+    <div class="container">
+        <a class="navbar-brand serif" href="index.html">Flower Ranch.</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto gap-3 align-items-center">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="story.html">Story</a></li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="menuDrop" role="button" data-bs-toggle="dropdown">Menus</a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="coffee.html">Coffee</a></li>
+                        <li><a class="dropdown-item" href="bakery.html">Bakery</a></li>
+                        <li><a class="dropdown-item" href="flowers.html">Flowers</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+                <li class="nav-item"><a class="nav-link" href="location.html">Visit</a></li>
+                <li class="nav-item">
+                    <a class="btn btn-dark rounded-pill px-4 text-white" href="checkout.html">
+                        Bag (<span id="cart-count">0</span>)
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container py-5 mt-5">
+    <h1 class="serif display-4 text-center mb-5">Moments at the Ranch</h1>
+
+    <!-- Animated Image Carousel -->
+    <div id="ranchCarousel" class="carousel slide mb-5" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#ranchCarousel" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#ranchCarousel" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#ranchCarousel" data-bs-slide-to="2"></button>
+        </div>
+        <div class="carousel-inner rounded-4 shadow">
+            <div class="carousel-item active">
+                <img src="https://flowerranchcafe.com/cdn/shop/files/DSCF8765.jpg?v=1688654561&width=1200" class="d-block w-100" style="height: 500px; object-fit: cover;" alt="Cafe interior">
+            </div>
+            <div class="carousel-item">
+                <img src="https://flowerranchcafe.com/cdn/shop/products/DSCF8567.jpg?v=1681198077&width=1200" class="d-block w-100" style="height: 500px; object-fit: cover;" alt="Flower arrangements">
+            </div>
+            <div class="carousel-item">
+                <img src="https://flowerranchcafe.com/cdn/shop/collections/DSCF0087_6eadd5a5-c261-4c20-98e7-3f00d8c00538.jpg?v=1701368974&width=1200" class="d-block w-100" style="height: 500px; object-fit: cover;" alt="Coffee and pastries">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#ranchCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#ranchCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+    </div>
+
+    <div class="row g-4 justify-content-center">
+        <div class="col-md-6 col-lg-4">
+            <img src="https://flowerranchcafe.com/cdn/shop/files/DSCF8765.jpg?v=1688654561&width=750" class="gallery-item shadow-sm" onclick="openLightbox(this.src)">
+        </div>
+        <div class="col-md-6 col-lg-4">
+            <img src="https://flowerranchcafe.com/cdn/shop/products/DSCF8567.jpg?v=1681198077&width=750" class="gallery-item shadow-sm" onclick="openLightbox(this.src)">
+        </div>
+        <div class="col-md-6 col-lg-4">
+            <img src="https://flowerranchcafe.com/cdn/shop/collections/DSCF0087_6eadd5a5-c261-4c20-98e7-3f00d8c00538.jpg?v=1701368974&width=750" class="gallery-item shadow-sm" onclick="openLightbox(this.src)">
+        </div>
+        <div class="col-md-6 col-lg-4">
+            <img src="https://flowerranchcafe.com/cdn/shop/collections/DSCF1035.jpg?v=1692591348&width=750" class="gallery-item shadow-sm" onclick="openLightbox(this.src)">
+        </div>
+    </div>
+</div>
+
+<div id="lightbox" onclick="this.style.display='none'">
+    <img id="lightbox-img" src="">
+</div>
+
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <h5 class="serif mb-4">Flower Ranch.</h5>
+                <a href="index.html" class="sitemap-link">Home</a>
+                <a href="story.html" class="sitemap-link">Our Story</a>
+                <a href="coffee.html" class="sitemap-link">Coffee Menu</a>
+            </div>
+            <div class="col-md-4">
+                <h5 class="serif mb-4">&nbsp;</h5>
+                <a href="bakery.html" class="sitemap-link">Bakery</a>
+                <a href="flowers.html" class="sitemap-link">Floral Studio</a>
+                <a href="gallery.html" class="sitemap-link">Gallery</a>
+                <a href="location.html" class="sitemap-link">Find Us</a>
+            </div>
+            <div class="col-md-4 text-md-end">
+                <h5 class="serif mb-4">Project VACLA</h5>
+                <div class="dev-credit">San Diego | Barcelona | Dy | Mendoza | Tan</div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Popper.js and Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+<script src="cart.js"></script>
+<script>
+    function openLightbox(src) {
+        document.getElementById('lightbox-img').src = src;
+        document.getElementById('lightbox').style.display = 'flex';
+    }
+</script>
+</body>
+</html>
