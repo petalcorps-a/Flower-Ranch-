@@ -118,44 +118,35 @@ document.addEventListener('DOMContentLoaded', () => {
     updateCartUI();
     initSignaturePad();
     
-    const checkoutForm = document.querySelector('form');
+    const checkoutForm = document.getElementById('orderForm');
     if (checkoutForm) {
         checkoutForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            if (cart.length === 0) return alert("Your bag is empty!");
+            // Check if cart is empty before doing anything
+            if (cart.length === 0) {
+                e.preventDefault(); 
+                return alert("Your bag is empty!");
+            }
 
-    if (canvas && ctx) {
-         const blankCanvas = document.createElement('canvas');
-         blankCanvas.width = canvas.width;
-         blankCanvas.height = canvas.height;
+            // 1. Pack the data into the hidden fields so the SERVER can see them
+            const signatureInput = document.getElementById('signatureData');
+            if (signatureInput && canvas) {
+                signatureInput.value = canvas.toDataURL(); // Save signature string
+            }
 
-    if (canvas.toDataURL() === blankCanvas.toDataURL()) {
-        alert("Please provide your signature before confirming the order.");
-        return;
-    }
-}
+            const cartInput = document.getElementById('cartData');
+            if (cartInput) {
+                cartInput.value = JSON.stringify(cart); // Save cart items string
+            }
 
-            let orderHistory = JSON.parse(localStorage.getItem('ranchOrders')) || [];
+            const totalInput = document.getElementById('totalPriceInput');
+            if (totalInput) {
+                const total = cart.reduce((sum, item) => sum + item.price, 0);
+                totalInput.value = `₱${total.toLocaleString()}`; // Save total price
+            }
 
-            const newOrder = {
-                id: Date.now(),
-                date: new Date().toLocaleString(),
-                customer: {
-                    name: checkoutForm.querySelector('input[type="text"]').value,
-                    email: checkoutForm.querySelector('input[type="email"]').value
-                },
-                items: cart,
-                total: cart.reduce((sum, item) => sum + item.price, 0),
-                signature: canvas.toDataURL()
-            };
-
-            orderHistory.push(newOrder);
-            localStorage.setItem('ranchOrders', JSON.stringify(orderHistory));
-
-            localStorage.removeItem('ranchCart');
-            cart = [];
-            alert("Order Confirmed! Your order history has been updated.");
-            window.location.href = 'index.html';
+            // DO NOT use e.preventDefault() here. 
+            // We want the form to submit to /submit-order now!
+            console.log("Sending data to Render...");
         });
     }
 });
